@@ -1,20 +1,20 @@
 /* ============================================================
    NATALIA LISOHURSKA — PORTFOLIO
-   Inspired by foreverlong.io: dark, minimal, typographic
+   Warm cream & charcoal: editorial, human, confident
    ============================================================ */
 
 /* ── TOKENS ── */
 :root {
-  --bg: #0D1B1E;
-  --surface: #132025;
-  --surface-hover: #182B30;
-  --border: rgba(255, 255, 255, 0.07);
-  --text: #F5F0EB;
-  --muted: #7A9298;
-  --muted-light: #A8BEC2;
-  --accent: #1d8f8b;
-  --accent-light: #97c1b4;
-  --accent-glow: rgba(29, 143, 139, 0.15);
+  --bg: #F5EFE6;
+  --surface: #EDE6DA;
+  --surface-hover: #E5DDD0;
+  --border: rgba(28, 25, 23, 0.1);
+  --text: #1C1917;
+  --muted: #8C7B6B;
+  --muted-light: #5C4F42;
+  --accent: #C4622D;
+  --accent-light: #D97B4F;
+  --accent-glow: rgba(196, 98, 45, 0.12);
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'Fragment Mono', 'Courier New', monospace;
   --radius: 6px;
@@ -71,7 +71,7 @@ img { display: block; max-width: 100%; }
               border-bottom 0.3s ease;
 }
 #nav.scrolled {
-  background: rgba(13, 27, 30, 0.85);
+  background: rgba(245, 239, 230, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -109,7 +109,7 @@ img { display: block; max-width: 100%; }
 .nav-links a.nav-cta {
   color: var(--accent-light);
   padding: 7px 18px;
-  border: 1px solid rgba(151, 193, 180, 0.3);
+  border: 1px solid rgba(196, 98, 45, 0.3);
   border-radius: 100px;
   font-size: 13px;
   font-weight: 500;
@@ -166,7 +166,7 @@ img { display: block; max-width: 100%; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 60% 40%, rgba(29, 143, 139, 0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 60% at 60% 40%, rgba(196, 98, 45, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner {
@@ -236,7 +236,7 @@ img { display: block; max-width: 100%; }
   color: var(--accent-light);
   letter-spacing: 0.03em;
   padding-bottom: 3px;
-  border-bottom: 1px solid rgba(151, 193, 180, 0.4);
+  border-bottom: 1px solid rgba(196, 98, 45, 0.35);
   transition: border-color 0.2s, color 0.2s, transform 0.2s;
   transition-delay: 0s !important;
 }
@@ -377,7 +377,7 @@ section { padding: 120px 32px; }
   font-size: 12px;
   font-weight: 500;
   color: var(--muted-light);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(28, 25, 23, 0.05);
   border: 1px solid var(--border);
   border-radius: 100px;
   padding: 5px 14px;
@@ -386,8 +386,8 @@ section { padding: 120px 32px; }
 }
 .tag:hover {
   background: var(--accent-glow);
-  border-color: rgba(29, 143, 139, 0.4);
-  color: var(--accent-light);
+  border-color: rgba(196, 98, 45, 0.4);
+  color: var(--accent);
 }
 
 
@@ -508,7 +508,7 @@ section { padding: 120px 32px; }
   font-size: 13px;
   font-weight: 400;
   color: var(--muted-light);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(28, 25, 23, 0.05);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 7px 14px;
@@ -517,8 +517,8 @@ section { padding: 120px 32px; }
 }
 .pill:hover {
   background: var(--accent-glow);
-  border-color: rgba(29, 143, 139, 0.4);
-  color: var(--accent-light);
+  border-color: rgba(196, 98, 45, 0.4);
+  color: var(--accent);
   transform: translateY(-1px);
 }
 .pill-lang {
@@ -542,7 +542,7 @@ section { padding: 120px 32px; }
    CONTACT
    ============================================================ */
 #contact {
-  background: linear-gradient(135deg, var(--bg) 0%, rgba(29, 143, 139, 0.05) 100%);
+  background: linear-gradient(135deg, var(--bg) 0%, rgba(196, 98, 45, 0.06) 100%);
 }
 .contact-inner {
   text-align: left;
@@ -580,8 +580,8 @@ section { padding: 120px 32px; }
   letter-spacing: 0.01em;
 }
 .contact-link:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(28, 25, 23, 0.05);
+  border-color: rgba(28, 25, 23, 0.2);
   color: var(--text);
   transform: translateY(-2px);
 }
@@ -592,8 +592,8 @@ section { padding: 120px 32px; }
   font-weight: 500;
 }
 .contact-link.primary:hover {
-  background: #1d9f9b;
-  border-color: #1d9f9b;
+  background: #B5561F;
+  border-color: #B5561F;
   color: #fff;
 }
 
@@ -666,7 +666,7 @@ footer {
     position: absolute;
     top: var(--nav-h);
     left: 0; right: 0;
-    background: rgba(13, 27, 30, 0.97);
+    background: rgba(245, 239, 230, 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
