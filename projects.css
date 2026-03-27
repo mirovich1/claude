@@ -1,0 +1,190 @@
+/* ============================================================
+   PROJECTS PAGE — additional styles
+   Inherits all tokens and base styles from style.css
+   ============================================================ */
+
+/* ── Page header ── */
+.page-header {
+  padding: calc(var(--nav-h) + 80px) 32px 56px;
+}
+.page-title {
+  font-size: clamp(44px, 7vw, 88px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 24px;
+  transition-delay: 0.1s;
+}
+.page-subtitle {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 560px;
+  transition-delay: 0.2s;
+}
+
+/* ── Filters ── */
+.filters-bar {
+  padding: 0 32px 48px;
+}
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 7px 18px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  letter-spacing: 0.01em;
+  min-height: 36px;
+}
+.filter-btn:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+}
+.filter-btn.active {
+  color: var(--bg);
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+}
+
+/* ── Projects grid ── */
+.projects-section {
+  padding: 0 32px 120px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+/* ── Project card ── */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-card:hover {
+  background: var(--surface-hover);
+  border-color: rgba(29, 143, 139, 0.25);
+  transform: translateY(-2px);
+}
+.project-card:hover::before { opacity: 1; }
+.project-card.hidden { display: none; }
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.project-year {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+.project-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+.project-desc {
+  font-size: 14px;
+  color: var(--muted-light);
+  line-height: 1.75;
+  flex-grow: 1;
+}
+
+/* ── Outcome stats ── */
+.project-outcomes {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.outcome {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.outcome-value {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  color: var(--accent-light);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.outcome-label {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* ── Active nav link ── */
+.nav-active {
+  color: var(--text) !important;
+}
+
+/* ── CTA section ── */
+.projects-cta {
+  padding: 120px 32px;
+  background: linear-gradient(135deg, var(--bg) 0%, rgba(29, 143, 139, 0.05) 100%);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .project-card { padding: 32px; }
+}
+
+@media (max-width: 640px) {
+  .page-header { padding: calc(var(--nav-h) + 48px) 20px 40px; }
+  .filters-bar { padding: 0 20px 36px; }
+  .projects-section { padding: 0 20px 80px; }
+  .projects-cta { padding: 80px 20px; }
+  .project-card { padding: 24px 20px; gap: 20px; }
+  .project-title { font-size: 19px; }
+  .project-outcomes { gap: 16px; flex-wrap: wrap; }
+  .outcome-value { font-size: 18px; }
+  .page-subtitle { font-size: 15px; }
+}
