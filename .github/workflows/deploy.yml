@@ -1,0 +1,21 @@
+name: Deploy to natalialisohurska.work
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 216.158.228.244
+          username: root
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd /var/www/natalialisohurska
+            git pull origin master
+            echo "Deployed at $(date)"
